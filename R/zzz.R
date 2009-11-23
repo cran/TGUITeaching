@@ -1,14 +1,14 @@
 .First.lib <- function(lib, pkg) {
     ### Part of the .First.lib to be change by a package writer
-    if(!file.exists("adminExercise.txt")){
-      fco <- file("adminExercise.txt","w")
-      close(fco)
-    }
-	  packageName <- "TGUITeaching" ###Package name
+   # if(!file.exists("adminExercise.txt")){
+    #  fco <- file("adminExercise.txt","w")
+     # close(fco)
+    #}
+	packageName <- "TGUITeaching" ###Package name
     mainTitle 	<- "TGUI-System" ### title for GUI
     mainSub 	<- "Toggle-GUI-System"###subtitle for GUI
-	  subTitle 	<- "Interactive Feedback- and Training-Tool for Teaching & Learning" ##subsubtitle
-	  usertitle 	<- "Student Interface" #Name for the user interface
+	subTitle 	<- "Interactive Feedback- and Training-Tool for Teaching & Learning" ##subsubtitle
+	usertitle 	<- "Student Interface" #Name for the user interface
     admintitle 	<- "Trainer Interface" # Name for the admin interface
     developed1 	<- "TGUI-Basic-System developed by G. Dinges, M. Templ (2005)"#comments
     developed2 	<- "Redesigned by G. Dinges, A. Kowarik, B. Meindl, M. Templ (2009)"#comments 
@@ -22,12 +22,14 @@
   	pathGUI <<- getwd()
     if(Sys.info()[1]=="Windows") {
       pathEtc <- paste(searchpaths()[grep(packageName, searchpaths())], "\\etc", sep="")
+	  pathEtcCore <- paste(searchpaths()[grep("TGUICore", searchpaths())], "\\etc", sep="")
 	  pathData <- paste(searchpaths()[grep(packageName, searchpaths())], "\\data\\", sep="")
       pathDoc <- paste(searchpaths()[grep(packageName, searchpaths())], "\\doc\\", sep="")
       pathContents <- paste(pathEtc, "\\contents.csv", sep="")
     }			
     else {
       pathEtc <- paste(searchpaths()[grep(packageName, searchpaths())], "/etc", sep="")
+	  pathEtcCore <- paste(searchpaths()[grep("TGUICore", searchpaths())], "/etc", sep="")
 	  pathData <- paste(searchpaths()[grep(packageName, searchpaths())], "/data/", sep="")
 	  pathDoc <- paste(searchpaths()[grep(packageName, searchpaths())], "/doc/", sep="")
       pathContents <- paste(pathEtc, "/contents.csv", sep="")
@@ -37,6 +39,7 @@
     colnames(contents) <- c("Kurs","Teil","Funktion","Auswertung","Titel","Antwort")
     aTassign("contents",contents)
     aTassign("pathEtc", pathEtc);			aTassign("pathDoc", pathDoc)
+	aTassign("pathEtcCore", pathEtcCore);
 	aTassign("pathData", pathData);			
     aTassign("mainTitle",mainTitle);		aTassign("subTitle", subTitle)
 	aTassign("mainSub", mainSub);
@@ -46,13 +49,22 @@
     aTassign("alwaysOn","Data Collection")
 	
 	createAdminExercice <- function() {
-		if(!file.exists("adminExercise.txt")) {
-			dat <- as.character(read.table(file=paste(aTget("pathEtc"), "/contents.csv", sep=""), sep=";")[,3])
-			dat <- as.character(sapply(dat, function(x) { substr(x, 1, nchar(x)-2) } ))
-			write.table(dat, file="adminExercise.txt", row.names=FALSE, col.names=FALSE, quote=FALSE)			
-		}		
+		datCore <- as.character(read.table(file=paste(aTget("pathEtcCore"), "/contents.csv", sep=""), sep=";")[,3])
+		datCore <- as.character(sapply(datCore, function(x) { substr(x, 1, nchar(x)-2) } ))
+		
+		if(file.exists("adminExercise.txt")) {
+			datCore <- as.character(read.table(file=paste(aTget("pathEtcCore"), "/contents.csv", sep=""), sep=";")[,3])
+			datCore <- as.character(sapply(datCore, function(x) { substr(x, 1, nchar(x)-2) } ))
+			datCur <- as.character(read.table("adminExercise.txt")$V1)
+			if((length(datCore) == length(datCur)) & (length(which(datCore != datCur))==0)) {
+				dat <- as.character(read.table(file=paste(aTget("pathEtc"), "/contents.csv", sep=""), sep=";")[,3])
+				dat <- as.character(sapply(dat, function(x) { substr(x, 1, nchar(x)-2) } ))
+				write.table(dat, file="adminExercise.txt", row.names=FALSE, col.names=FALSE, quote=FALSE)
+			}
+			# else we keep the existing file
+		}	
 	}
 	createAdminExercice()
-  cat("The window of the R console should be minimized while using the GUI.\n")
-  runGUI()
+  	#cat("The window of the R console should be minimized while using the GUI.\n")
+  	runGUI()
 }
