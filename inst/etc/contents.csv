@@ -1,2 +1,12 @@
-Test-Course;Simple Question;exercise1();1;Who is the president;2
-Feedback;Feedback-Block;feedback();1;Feedback;1
+TGUI-Demo;TGUI-Demo(Simple Questions);ex_praesident();1;Who is the president;2
+TGUI-Demo;TGUI-Demo(Simple Questions);ex_errors();1;Errors and pitfalls;3
+TGUI-Demo;TGUI-Demo(Interactive Examples);ex_clt();1;Central Limit Theorem (interactive graphic);1
+TGUI-Demo;TGUI-Demo(Interactive Examples);ex_eda();1;EDA (interactiv analysis of course data);
+TGUI-Demo;TGUI-Demo(Interactive Examples);ex_boxplots();1;Boxplots (interactive graphic);3,4,6
+TGUI-Demo;TGUI-Demo(Interactive Examples);ex_timeseries();1;Moving Average Process;1
+TGUI-Demo;TGUI-Demo(Interactive Examples);ex_BinomPlot();0;Binomial distribution;0
+TGUI-Demo;TGUI-Demo(Interactive Examples);ex_Hists();0;Interactive histogram;0
+TGUI-Demo;TGUI-Demo(Interactive Examples);ex_QQPlots();1;QQ-Plots;3
+TGUI-Demo;TGUI-Demo(Animation);ex_animationMeanMedian();0;Location;0
+Feedback;Feedback-Block;ex_feedback();1;Feedback;1
+Data Collection;Example Collection;ex_dataCollection();0;Data Collection Course;0
