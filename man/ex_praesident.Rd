@@ -12,8 +12,19 @@
 \alias{ex_QQPlots}
 \alias{ex_timeseries}
 \title{ex_praesident}
-\description{Two examples fot the usage of the functionality of the package TGUICore}
+\description{Different examples for the usage of the functions of the package TGUICore. The examples can be called with the GUI.}
 \usage{ex_praesident(eval=FALSE)}
+\usage{ex_animationMeanMedian(eval=FALSE)}
+\usage{ex_BinomPlot(eval=FALSE)}
+\usage{ex_boxplots(eval=FALSE)}
+\usage{ex_clt(eval=FALSE)}
+\usage{ex_dataCollection(eval=FALSE)}
+\usage{ex_eda(eval=FALSE)}
+\usage{ex_errors(eval=FALSE)}
+\usage{ex_feedback(eval=FALSE)}
+\usage{ex_Hists(eval=FALSE)}
+\usage{ex_QQPlots(eval=FALSE)}
+\usage{ex_timeseries(eval=FALSE)}
 \arguments{
 	\item{eval}{TRUE/FALSE if the evaluation view of the example (if it exists) should be opened}
 }
