@@ -128,7 +128,7 @@
 	a51 <- tkentry(MainFrame, width="3", textvariable=timeHH, font=fontNormal)
 	a52 <- tkentry(MainFrame, width="3", textvariable=timeMM, font=fontNormal)
 	
- 	a6 	<- tkscale(MainFrame, from=0, to=5, showvalue=F, variable=randExp, resolution=1, orient="horizontal")
+ 	a6 	<- tkscale(MainFrame, from=0, to=5, showvalue=FALSE, variable=randExp, resolution=1, orient="horizontal")
 	
 	tkgrid(header1, columnspan=4)
 	tkgrid(header2, columnspan=4)
