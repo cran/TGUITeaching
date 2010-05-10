@@ -1,19 +1,19 @@
 `ex_clt` <- function(eval=FALSE) {
 	clt.examp <- function () {
 		if(Texists("nrSamples")) 
-			n <- as.numeric(evalq(tclvalue(nrSamples), env = TGUIenv))
+			n <- as.numeric(evalq(tclvalue(nrSamples), env = as.environment(which(search()=="TGUIenv"))))
 		else 
 			n <- 1
 		if(Texists("nrDraws")) 
-			reps <- as.numeric(evalq(tclvalue(nrDraws), env = TGUIenv))
+			reps <- as.numeric(evalq(tclvalue(nrDraws), env = as.environment(which(search()=="TGUIenv"))))
 		else 
 			reps <- 3000		
 		if(Texists("nrClasses")) 
-			nclass <- as.numeric(evalq(tclvalue(nrClasses), env = TGUIenv))
+			nclass <- as.numeric(evalq(tclvalue(nrClasses), env = as.environment(which(search()=="TGUIenv"))))
 		else 
 			nclass <- 16		
 		if(Texists("userColor")) {
-			userCol <- as.numeric(evalq(tclvalue(userColor), env = TGUIenv))
+			userCol <- as.numeric(evalq(tclvalue(userColor), env = as.environment(which(search()=="TGUIenv"))))
 			if(userCol==1) color <- "cornflowerblue"
 			if(userCol==2) color <- "red"
 			if(userCol==3) color <- "yellow"
