@@ -1,4 +1,5 @@
 ex_praesident <- function(eval=FALSE) {
+	F1 <- NULL
   exerciseTitle <- "Simple Single Choice Question"; 
   fileEx <- "ex_praesident"
   q1 <- "Who is the president of the United States?"

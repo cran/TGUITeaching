@@ -1,4 +1,5 @@
 `ex_eda` <- function(eval=FALSE) {
+	plotscatter2 <- MainFrame <- scatter2 <- Exit <- NULL
 	useExampleData <- function() {
 		V1 <- c("Obelix", "Karli", "Susi", "RAPID", "Lisa", "Froq", "Gilbert",
 				"Bidl", "Anid", "nobody1", "Kurti", "Karfiol", "Me", "Moritz",

@@ -9,13 +9,13 @@
 \title{Interactive Generic Examples}
 
 \description{Different interactive examples to show the usage of the functions of the package TGUICore. The examples can be called from the TGUI-interface.}
-\usage{ex_boxplots(eval=FALSE)}
-\usage{ex_clt(eval=FALSE)}
-\usage{ex_eda(eval=FALSE)}
-\usage{ex_Hists(eval=FALSE)}
-\usage{ex_QQPlots(eval=FALSE)}
-\usage{ex_timeseries(eval=FALSE)}
-\usage{ex_BinomPlot(eval=FALSE)}
+\usage{ex_boxplots(eval=FALSE)
+ex_clt(eval=FALSE)
+ex_eda(eval=FALSE)
+ex_Hists()
+ex_QQPlots(eval=FALSE)
+ex_timeseries(eval=FALSE)
+ex_BinomPlot()}
 \arguments{
 	\item{eval}{TRUE/FALSE if the evaluation view of the example (if it exists) should be opened}
 }

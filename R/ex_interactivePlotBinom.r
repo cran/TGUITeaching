@@ -1,4 +1,5 @@
 `ex_BinomPlot` <- function () {
+	interactive1 <- Exit <- NULL
     binom.refresh <- function() {
       if(Texists("n")&&Texists("sn")){
         n <- as.numeric(evalq(tclvalue(n), env = as.environment(which(search()=="TGUIenv"))))

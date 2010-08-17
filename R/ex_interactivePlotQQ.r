@@ -1,4 +1,5 @@
 `ex_QQPlots` <- function(eval=FALSE) {
+	interactive31 <- interactive32 <- MainFrame <- Exit <- NULL
 	plotInteractive3 <- function() {
 		qq.plot <- function (x, distribution = "norm", ylab = deparse(substitute(x)),
 				xlab = paste(distribution, "quantiles"), main = "", las = par("las"),

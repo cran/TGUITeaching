@@ -1,4 +1,6 @@
 `ex_animationMeanMedian` <- function() {
+	MainFrame <- NULL
+	Exit <- NULL
 	OpenWindow(title="Means (interactive graph)")
     plot_lage <- function(i,j) {
 	    par(bg="white")

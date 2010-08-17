@@ -1,4 +1,5 @@
 `ex_boxplots` <- function(eval=FALSE) {
+	BoxplotFrame <- MainFrame <- Boxplot1 <- Exit <- NULL
 	plotBoxplot <- function() {
     require(lattice)
 		par(bg="white")

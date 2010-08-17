@@ -1,4 +1,5 @@
 `ex_clt` <- function(eval=FALSE) {
+	nrSamples <- nrDraws <- nrClasses <- userColor <- NewFrame <- MainFrame <- qCLT <- NULL
 	clt.examp <- function () {
 		if(Texists("nrSamples")) 
 			n <- as.numeric(evalq(tclvalue(nrSamples), env = as.environment(which(search()=="TGUIenv"))))

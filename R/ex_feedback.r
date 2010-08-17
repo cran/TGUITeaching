@@ -1,4 +1,5 @@
 ex_feedback <- function(eval=FALSE) {
+	MainFrame <- feedb <- NULL
   exerciseTitle <- "Feedback: Imputation"
   q1 <- "YOUR OPINION COUNTS! \n \n Please answer the following questions in keywords:"
   q2 <- c("Do you think that important questions about 'imputation' have not been answered (if so, which)?",

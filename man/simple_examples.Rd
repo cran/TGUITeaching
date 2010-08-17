@@ -4,8 +4,9 @@
 \title{Simple Generic Examples}
 
 \description{Different simple generic examples to show the usage of the functions of the package TGUICore. The examples be called from the TGUI-interface.}
-\usage{ex_praesident(eval=FALSE)}
-\usage{ex_errors(eval=FALSE)}
+\usage{ex_praesident(eval=FALSE)
+ex_errors(eval=FALSE)
+}
 \arguments{
 	\item{eval}{TRUE/FALSE if the evaluation view of the example (if it exists) should be opened}
 }

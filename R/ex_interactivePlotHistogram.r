@@ -1,5 +1,6 @@
 `ex_Hists` <- function() {
-	OnLeftClick <- function(x,y) {
+	img <- breaksMethod <- interactive2 <- Exit <- NULL
+	OnLeftClick <- function(x,y) {		
     	xClick <- x
     	yClick <- y
 	    width <- as.numeric(tclvalue(tkwinfo("reqwidth",img)))
@@ -33,6 +34,7 @@
 	  	mean(x)
   	}  
   	hist.refresh <- function() {
+		
     	Methods <- c("Wurzeln", "sturges", "fd")
     	par(bg="white")
     	if(Texists("maxx")) {

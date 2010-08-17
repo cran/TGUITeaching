@@ -1,4 +1,5 @@
 `ex_dataCollection` <- function() {
+	tt <- MainFrame <- NULL 
 	OnOK <- function() {
 		correct <- TRUE
 		name <- tclvalue(anonym)

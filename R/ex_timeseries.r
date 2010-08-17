@@ -1,4 +1,5 @@
 ex_timeseries <- function(eval=FALSE) {
+	p1 <- p2 <- strata1 <- MainFrame <- plotLagemasse <- NULL
   plotTS <- function() {
     par(bg="white")
     co <- c(0.7,-0.6)

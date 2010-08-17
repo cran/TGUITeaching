@@ -1,4 +1,5 @@
 `ex_errors` <- function(eval=FALSE) {
+	MainFrame <- err1 <- NULL
 	exerciseTitle <- "Exercise: errors and pitfalls"
 	q1 <- "In a well known Austrian newspaper the headline\n describing the graph from above was as follows:"
 	q2 <- c("'62 PERCENT OF ALL MALES DID NOT MAKE THE GRADE!'",
