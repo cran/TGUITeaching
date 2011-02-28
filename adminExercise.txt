@@ -1,0 +1,12 @@
+ex_praesident
+ex_errors
+ex_clt
+ex_eda
+ex_boxplots
+ex_timeseries
+ex_BinomPlot
+ex_Hists
+ex_QQPlots
+ex_animationMeanMedian
+ex_feedback
+ex_dataCollection

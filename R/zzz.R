@@ -62,6 +62,7 @@
 		dat <- as.character(sapply(dat, function(x) { substr(x, 1, nchar(x)-2) } ))
 		write.table(dat, file=paste(aTget("pathGUI"),"/adminExercise.txt",sep=""), row.names=FALSE, col.names=FALSE, quote=FALSE)			
 	}		
-  	cat("The window of the R console should be minimized while using the GUI.\n")
-  	runGUI()
+    cat("Start the GUI for the participants with runGUI()\n and the GUI for the course leader with adminGUI()\n")
+    cat("The window of the R console should be minimized while using the GUI.\n")
+#  	runGUI()
 }
