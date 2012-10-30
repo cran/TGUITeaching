@@ -1,4 +1,4 @@
-.First.lib <- function(lib, pkg) {
+.onAttach <- function(lib, pkg) {
     ### Part of the .First.lib to be change by a package writer
    # if(!file.exists("adminExercise.txt")){
     #  fco <- file("adminExercise.txt","w")
@@ -62,7 +62,7 @@
 		dat <- as.character(sapply(dat, function(x) { substr(x, 1, nchar(x)-2) } ))
 		write.table(dat, file=paste(aTget("pathGUI"),"/adminExercise.txt",sep=""), row.names=FALSE, col.names=FALSE, quote=FALSE)			
 	}		
-    cat("Start the GUI for the participants with runGUI()\n and the GUI for the course leader with adminGUI()\n")
-    cat("The window of the R console should be minimized while using the GUI.\n")
+    packageStartupMessage("Start the GUI for the participants with runGUI()\n and the GUI for the course leader with adminGUI()\n")
+    packageStartupMessage("The window of the R console should be minimized while using the GUI.\n")
 #  	runGUI()
 }

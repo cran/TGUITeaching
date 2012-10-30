@@ -5,11 +5,11 @@
 		par(bg="white")
 		
 		if(Texists("choiceData"))	
-				choiceData <- evalq(tclvalue(choiceData), env = as.environment(which(search()=="TGUIenv")))
+				choiceData <- evalq(tclvalue(choiceData), envir = as.environment(which(search()=="TGUIenv")))
 		else 	choiceData <- 1			
 
 		if(Texists("horiz"))	
-				horiz <- evalq(tclvalue(horiz), env = as.environment(which(search()=="TGUIenv")))
+				horiz <- evalq(tclvalue(horiz), envir = as.environment(which(search()=="TGUIenv")))
 		else 	horiz <- 1	
 		
 		if(horiz==2)
@@ -17,7 +17,7 @@
 		else 	horiz <- FALSE
 		
 		if(Texists("logar"))	
-				logar <- evalq(tclvalue(logar), env = as.environment(which(search()=="TGUIenv")))
+				logar <- evalq(tclvalue(logar), envir = as.environment(which(search()=="TGUIenv")))
 		else 	logar <- FALSE	
 		
 		if(logar==2) 	logar <- TRUE

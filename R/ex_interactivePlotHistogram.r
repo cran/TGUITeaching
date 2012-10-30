@@ -38,9 +38,9 @@
     	Methods <- c("Wurzeln", "sturges", "fd")
     	par(bg="white")
     	if(Texists("maxx")) {
-      		maxx <- as.numeric(evalq(tclvalue(maxx), env = as.environment(which(search()=="TGUIenv"))))
-      		minx <- as.numeric(evalq(tclvalue(minx), env = as.environment(which(search()=="TGUIenv"))))
-      		breaks <- Methods[as.numeric(evalq(tclvalue(breaksMethod), env = as.environment(which(search()=="TGUIenv"))))]
+      		maxx <- as.numeric(evalq(tclvalue(maxx), envir = as.environment(which(search()=="TGUIenv"))))
+      		minx <- as.numeric(evalq(tclvalue(minx), envir = as.environment(which(search()=="TGUIenv"))))
+      		breaks <- Methods[as.numeric(evalq(tclvalue(breaksMethod), envir = as.environment(which(search()=="TGUIenv"))))]
 		}
 		else {
       		maxx <- 5

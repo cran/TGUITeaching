@@ -34,16 +34,16 @@
 		
 		diagLabels <- c("histogram", "density", "boxplot", "qqplot")			
 		
-		ifelse(Texists("aa"), aa <- as.numeric(evalq(tclvalue(aa), env = as.environment(which(search()=="TGUIenv")))), aa <- 0)
-		ifelse(Texists("bb"), bb <- as.numeric(evalq(tclvalue(bb), env = as.environment(which(search()=="TGUIenv")))), bb <- 1)
-		ifelse(Texists("cc"), cc <- as.numeric(evalq(tclvalue(cc), env = as.environment(which(search()=="TGUIenv")))), cc <- 1)
-		ifelse(Texists("dd"), dd <- as.numeric(evalq(tclvalue(dd), env = as.environment(which(search()=="TGUIenv")))), dd <- 0)
+		ifelse(Texists("aa"), aa <- as.numeric(evalq(tclvalue(aa), envir = as.environment(which(search()=="TGUIenv")))), aa <- 0)
+		ifelse(Texists("bb"), bb <- as.numeric(evalq(tclvalue(bb), envir = as.environment(which(search()=="TGUIenv")))), bb <- 1)
+		ifelse(Texists("cc"), cc <- as.numeric(evalq(tclvalue(cc), envir = as.environment(which(search()=="TGUIenv")))), cc <- 1)
+		ifelse(Texists("dd"), dd <- as.numeric(evalq(tclvalue(dd), envir = as.environment(which(search()=="TGUIenv")))), dd <- 0)
 		
-		ifelse(Texists("diagonal"),	diagonal <- evalq(tclvalue(diagonal), env = as.environment(which(search()=="TGUIenv"))), diagonal <- 1)		
+		ifelse(Texists("diagonal"),	diagonal <- evalq(tclvalue(diagonal), envir = as.environment(which(search()=="TGUIenv"))), diagonal <- 1)		
 		diagLabels <- c("histogram", "density", "boxplot", "qqplot")	
 		ergDiag <- diagLabels[as.integer(diagonal)]			
 		
-		ifelse(Texists("smoothing"), smoothing <- evalq(tclvalue(smoothing), env = as.environment(which(search()=="TGUIenv"))), smoothing <- FALSE)	
+		ifelse(Texists("smoothing"), smoothing <- evalq(tclvalue(smoothing), envir = as.environment(which(search()=="TGUIenv"))), smoothing <- FALSE)	
 		
 		colsVals <- c(aa,bb,cc,dd)
 		existCols <- which(colsVals==1)

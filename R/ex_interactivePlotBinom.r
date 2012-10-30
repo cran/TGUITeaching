@@ -2,10 +2,10 @@
 	interactive1 <- Exit <- NULL
     binom.refresh <- function() {
       if(Texists("n")&&Texists("sn")){
-        n <- as.numeric(evalq(tclvalue(n), env = as.environment(which(search()=="TGUIenv"))))
-        p <- as.numeric(evalq(tclvalue(p), env = as.environment(which(search()=="TGUIenv"))))
-        sn <- as.numeric(evalq(tclvalue(sn), env = as.environment(which(search()=="TGUIenv"))))==1
-        sp <- as.numeric(evalq(tclvalue(sp), env = as.environment(which(search()=="TGUIenv"))))==1
+        n <- as.numeric(evalq(tclvalue(n), envir = as.environment(which(search()=="TGUIenv"))))
+        p <- as.numeric(evalq(tclvalue(p), envir = as.environment(which(search()=="TGUIenv"))))
+        sn <- as.numeric(evalq(tclvalue(sn), envir = as.environment(which(search()=="TGUIenv"))))==1
+        sp <- as.numeric(evalq(tclvalue(sp), envir = as.environment(which(search()=="TGUIenv"))))==1
       }else{
         n <- 10
         p <- .5

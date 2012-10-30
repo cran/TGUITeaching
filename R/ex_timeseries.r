@@ -9,7 +9,7 @@ ex_timeseries <- function(eval=FALSE) {
     y.st <- y.st[1:199]
     strata <- c("original","acf","pacf","roots")
     if(Texists("strata1")){
-      strata <- strata[as.numeric(evalq(tclvalue(strata1), env = as.environment(which(search()=="TGUIenv"))))]    
+      strata <- strata[as.numeric(evalq(tclvalue(strata1), envir = as.environment(which(search()=="TGUIenv"))))]    
     }else{
       strata <- "original"
     }
